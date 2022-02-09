@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Mont';
+    src: local('Mont Regular Italic'), local('Mont-Regular-Italic'),
+        url('Mont-RegularItalic.woff2') format('woff2'),
+        url('Mont-RegularItalic.woff') format('woff'),
+        url('Mont-RegularItalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+  }
