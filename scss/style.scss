@@ -41,6 +41,7 @@ h4,
 h5,
 h6,
 p,
+a,
 ul,
 li,
 body,
@@ -148,7 +149,7 @@ header {
 
   &:hover {
     animation-name: pulse;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
@@ -164,9 +165,26 @@ header {
       padding-top: 44px;
       padding-bottom: 145px;
       li {
+        margin-right: 77px;
+      }
+      &-list {
         margin-right: 50px;
         a {
           transition: all 275ms ease;
+          position: relative;
+          &::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(
+              65.81deg,
+              #5e3928 -24.09%,
+              #e4a16f 104.02%
+            );
+            position: absolute;
+            opacity: 0;
+            bottom: 0%;
+          }
           &:hover {
             background: linear-gradient(
               65.81deg,
@@ -174,11 +192,12 @@ header {
               #e4a16f 104.02%
             );
             background-clip: text;
+            -webkit-background-clip: text;
             color: transparent;
+            &::before {
+              opacity: 1;
+            }
           }
-        }
-        &:first-child {
-          margin-right: 77px;
         }
         &:last-child {
           margin-right: 0px;
@@ -253,10 +272,13 @@ header {
 
 .switch {
   &__left {
+
     left: 0%;
     position: absolute;
     top: 50%;
+    transition: all 275ms ease;
     svg {
+
       &:hover {
         rect {
           fill: url(#paint0_linear_23_486);
@@ -272,7 +294,9 @@ header {
     right: 0%;
     position: absolute;
     top: 50%;
+    transition: all 275ms ease;
     svg {
+
       &:hover {
         rect {
           fill: url(#paint0_linear_23_487);
@@ -317,6 +341,7 @@ header {
     }
   }
 }
+
 .sale {
   background: url(../img/sale.jpg);
   background-position: center center;
@@ -330,15 +355,16 @@ header {
     margin-bottom: 46px;
   }
   &__group {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 45px;
+    margin: 0 -15px;
     &__block {
       position: relative;
+      width: 446px;
+      margin:0 15px;
       img {
-        box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
         margin-bottom: 36px;
+        &:hover{
+          box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
+        }
       }
       &-text {
         display: flex;
@@ -467,16 +493,16 @@ header {
     margin-bottom: 40px;
   }
   &__about {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    margin:0 -15px;
     &__people {
       background-image: url(../img/bgpeople.svg);
       background-size: contain;
+      background-repeat: no-repeat;
       padding: 21px 40px 18px 30px;
-      width: 446px;
+      max-width: 446px;
       height: 332px;
       box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+      margin:0 15px;
       img {
         margin-bottom: 18px;
       }
@@ -535,6 +561,7 @@ header {
       button {
         background: linear-gradient(65.81deg, #5e3928 -24.09%, #e4a16f 104.02%);
         background-clip: text;
+        -webkit-background-clip: text;
         color: transparent;
         display: flex;
         align-items: center;
@@ -549,6 +576,7 @@ footer {
   padding: 79px 0;
   background-image: url(../img/Footer.jpg);
   background-size: cover;
+  position: relative;
 }
 .foot {
   display: flex;
@@ -616,7 +644,68 @@ footer {
     }
   }
 }
+.btnup {
+  position: absolute;
+  bottom: 0%;
+  right: 5%;
+  height: 127px;
+}
+
+@media (max-width: 1580px) {
+  .container {
+    max-width: 1441px;
+  }
+  header {
+    .switch {
+      &__right {
+        top: 15%;
+      }
+      &__left {
+        top: 15%;
+      }
+    }
+  }
+  .switch {
+    &__right {
+      top: 10%;
+    }
+    &__left {
+      top: 10%;
+    }
+  }
+}
 @media (max-width: 1440px) {
+  .container{
+    max-width: 1281px;
+  }
+  .products {
+    &__product {
+      &__block {
+        img {
+          max-width: 100%;
+        }
+      }
+      a {
+        width: 30%;
+      }
+    }
+  }
+  // .sales {
+  //   &__group {
+  //     &__block {
+  //       width: 30%;
+  //     }
+  //   }
+  // }
+  .review {
+    &__about {
+      &__people {
+        height: 425px;
+        max-width: 30%;
+      }
+    }
+  }
+
 }
 
 @media (max-width: 1280px) {
@@ -626,9 +715,21 @@ footer {
 }
 
 @media (max-width: 960px) {
-}
+  .sales {
+    &__group {
+      &__block {
+        width: 324px;
+        height: 481px;
+        img{
+          max-width: 100%;
+        }
+      }
+    }
+  }
 
+}
 @media (max-width: 768px) {
+
 }
 
 @media (max-width: 576px) {
