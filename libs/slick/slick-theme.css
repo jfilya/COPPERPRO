@@ -121,13 +121,11 @@
 
 .slick-dots
 {
-    position: absolute;
-    bottom: -44px;
-
+  padding-top: 45px;
     display: block;
 
     width: 100%;
-    padding: 0;
+    /* padding: 0; */
     margin: 0;
 
     list-style: none;
@@ -201,4 +199,18 @@ height: 12px;
 .slick-dots li.slick-active button:before
 {
     background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
+}
+
+@media (max-width: 960px){
+    .slick-dots{
+        padding-top: 37px;
+    }
+    .review__about>.slick-dots{
+        padding-top: 0px;
+    }
+}
+@media (max-width: 576px){
+    .slick-dots {
+        padding-top: 21px;
+    }
 }

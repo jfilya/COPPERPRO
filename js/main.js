@@ -10,18 +10,19 @@ $(function(){
             
             responsive: [
                 {
-                  breakpoint: 1024,
+                  breakpoint: 1025,
                   settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    initialSlide:3
+                    initialSlide: 1
                   }
                 },
                 {
-                  breakpoint: 480,
+                  breakpoint: 577,
                   settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    initialSlide: 1
                   }
                 }
               ] 
@@ -40,18 +41,19 @@ $(function(){
           
           responsive: [
               {
-                breakpoint: 1024,
+                breakpoint: 1025,
                 settings: {
                   slidesToShow: 2,
                   slidesToScroll: 2,
-                  initialSlide:3
+                  initialSlide: 1
                 }
               },
               {
-                breakpoint: 480,
+                breakpoint: 577,
                 settings: {
                   slidesToShow: 1,
-                  slidesToScroll: 1
+                  slidesToScroll: 1,
+                  initialSlide: 1
                 }
               }
             ] 
@@ -70,18 +72,19 @@ $(function(){
           
           responsive: [
               {
-                breakpoint: 1024,
+                breakpoint: 1025,
                 settings: {
                   slidesToShow: 2,
                   slidesToScroll: 2,
-                  initialSlide:3
+                  initialSlide: 1
                 }
               },
               {
-                breakpoint: 480,
+                breakpoint: 577,
                 settings: {
                   slidesToShow: 1,
-                  slidesToScroll: 1
+                  slidesToScroll: 1,
+                  initialSlide: 1
                 }
               }
             ] 
@@ -100,18 +103,19 @@ $(function(){
           
           responsive: [
               {
-                breakpoint: 1024,
+                breakpoint: 1025,
                 settings: {
                   slidesToShow: 2,
                   slidesToScroll: 2,
-                  initialSlide:3
+                  initialSlide: 1
                 }
               },
               {
-                breakpoint: 480,
+                breakpoint: 577,
                 settings: {
                   slidesToShow: 1,
-                  slidesToScroll: 1
+                  slidesToScroll: 1,
+                  initialSlide: 1
                 }
               }
             ] 
@@ -130,15 +134,14 @@ $(function(){
           
           responsive: [
               {
-                breakpoint: 1024,
+                breakpoint: 1025,
                 settings: {
                   slidesToShow: 2,
                   slidesToScroll: 2,
-                  initialSlide:3
                 }
               },
               {
-                breakpoint: 480,
+                breakpoint: 577,
                 settings: {
                   slidesToShow: 1,
                   slidesToScroll: 1
