@@ -555,6 +555,9 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   &__info {
+    &__protect{
+      max-width: 200px;
+    }
     li {
       color: #adadad;
       margin-bottom: 20px;
@@ -883,6 +886,13 @@ footer {
     }
     &__small{
       display: none;
+    }
+  }
+  .foot{
+    &__info{
+      &__protect{
+        max-width: 100%;
+      }
     }
   }
 }
